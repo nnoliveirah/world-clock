@@ -9,6 +9,15 @@ h1 {
   font-size: 36px;
 }
 
+h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: rgb(75, 49, 100);
+}
+
 h2 {
   margin: 0 0 5px;
   font-size: 28px;
@@ -41,6 +50,11 @@ select {
 
 .city:last-child {
   border: none;
+}
+.allcities {
+  display: block;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 .date {

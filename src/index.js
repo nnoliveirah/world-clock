@@ -24,6 +24,32 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]",
     );
   }
+
+  // Amsterdam
+  let amsterdamElement = document.querySelector("#amsterdam");
+  if (amsterdamElement) {
+    let amsterdamDateElement = amsterdamElement.querySelector(".date");
+    let amsterdamTimeElement = amsterdamElement.querySelector(".time");
+    let amsterdamTime = moment().tz("Europe/Amsterdam");
+
+    amsterdamDateElement.innerHTML = amsterdamTime.format("MMMM Do YYYY");
+    amsterdamTimeElement.innerHTML = amsterdamTime.format(
+      "h:mm:ss [<small>]A[</small>]",
+    );
+  }
+
+  // Bissau
+  let bissauElement = document.querySelector("#bissau");
+  if (bissauElement) {
+    let bissauDateElement = bissauElement.querySelector(".date");
+    let bissauTimeElement = bissauElement.querySelector(".time");
+    let bissauTime = moment().tz("Africa/Bissau");
+
+    bissauDateElement.innerHTML = bissauTime.format("MMMM Do YYYY");
+    bissauTimeElement.innerHTML = bissauTime.format(
+      "h:mm:ss [<small>]A[</small>]",
+    );
+  }
 }
 
 function updateCity(event) {
@@ -43,7 +69,10 @@ function updateCity(event) {
     <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
       "A",
     )}</small></div>
-  </div>
+    </div>
+    <div class="allcities"> 
+      <a href="/"> All cities</a> </div>
+    
   `;
 }
 
